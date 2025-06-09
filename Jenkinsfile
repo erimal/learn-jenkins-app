@@ -20,5 +20,15 @@ pipeline {
                 '''
             }
         }
+
+        stage ('Test stage') {
+            steps{
+                sh '''
+                    echo "Test Stage"
+                '''
+
+            }
+
+        }
     }
 }
