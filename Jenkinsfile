@@ -40,6 +40,23 @@ pipeline {
 
             }
         }
+        stage ('Deploy') {
+            agent {
+                docker {
+                    image 'node:18-alpine'
+                    reuseNode true
+                }
+            }
+            steps{
+                sh '''
+                    echo "Deploying"
+                    npm install netlify-cli -g
+                    netlify --version
+                '''
+
+            }
+        }
+        /*
         stage('E2E') {
             agent {
                 docker {
@@ -57,7 +74,7 @@ pipeline {
                 '''
             }
         }
-
+        */
 
 
 
