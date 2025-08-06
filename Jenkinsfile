@@ -43,6 +43,8 @@ pipeline {
 
             }
         }
+
+        /*
         stage ('Deploy') {
             agent {
                 docker {
@@ -62,6 +64,7 @@ pipeline {
 
             }
         }
+        */
         /*
         stage('E2E') {
             agent {
