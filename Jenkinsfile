@@ -5,7 +5,7 @@ pipeline {
         NETLIFY_AUTH_TOKEN = credentials('netlify-token-new')
     }
     stages {
-    
+
         stage('Build') {
             agent {
                 docker {
@@ -44,7 +44,7 @@ pipeline {
             }
         }
 
-/*
+
         stage ('Deploy') {
             agent {
                 docker {
@@ -64,7 +64,7 @@ pipeline {
 
             }
         }
-*/
+
 
         /*
         stage('E2E') {
